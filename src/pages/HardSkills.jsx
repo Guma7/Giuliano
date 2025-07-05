@@ -19,17 +19,26 @@ const Container = styled.div`
 `
 
 const Title = styled(motion.h1)`
-  font-size: 3rem;
-  font-weight: 700;
-  background: ${props => props.theme.colors.gradient.primary};
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  font-size: 3.5rem;
+  font-weight: 800;
   text-align: center;
   margin-bottom: 3rem;
   
+  background: linear-gradient(135deg, #8b5cf6 0%, #a855f7 50%, #c084fc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  
+  -webkit-text-stroke: 2px rgba(139, 92, 246, 0.3);
+  text-stroke: 2px rgba(139, 92, 246, 0.3);
+  
+  filter: drop-shadow(0 4px 8px rgba(139, 92, 246, 0.4)) 
+          drop-shadow(0 0 20px rgba(168, 85, 247, 0.3));
+  
   @media (max-width: ${props => props.theme.breakpoints.mobile}) {
-    font-size: 2rem;
+    font-size: 2.5rem;
+    -webkit-text-stroke: 1px rgba(139, 92, 246, 0.3);
+    text-stroke: 1px rgba(139, 92, 246, 0.3);
   }
 `
 
@@ -156,28 +165,28 @@ const HardSkills = () => {
   const skillCategories = [
     {
       category: t('hardSkills.categories.languages'),
-      color: '#ef4444',
-      skills: ['Python', 'JavaScript', 'TypeScript', 'C++', 'C#', 'SQL']
+      color: 'rgb(175, 34, 34)',
+      skills: ['Python', 'TypeScript', 'JavaScript', 'C++', 'C#', 'SQL']
     },
     {
       category: t('hardSkills.categories.frontend'),
-      color: '#3b82f6',
-      skills: ['React', 'Next.js', 'HTML', 'CSS', 'Tailwind CSS', 'Styled Components']
+      color: ' #3b82f6',
+      skills: ['React', 'Next.js', 'Tailwind CSS', 'Styled Components', 'HTML5', 'CSS3']
     },
     {
       category: t('hardSkills.categories.backend'),
       color: 'rgb(30, 145, 72)',
-      skills: ['Django', 'Node.js', 'FastAPI', 'Express.js', 'Flask']
+      skills: ['Django', 'Node.js', 'FastAPI', 'Supabase', 'API Rest', 'Express.js', 'Flask']
     },
     {
       category: t('hardSkills.categories.ml'),
-      color: 'rgb(223, 146, 12)',
-      skills: ['PyTorch', 'TensorFlow', 'Scikit-learn', 'Pandas', 'NumPy', 'Matplotlib']
+      color: 'rgb(194, 138, 41)',
+      skills: ['PyTorch', 'Hugging Face Transformers', 'LoRA / PEFT', 'LangChain', 'FAISS', 'SentenceTransformers', 'RAG', 'DeepSpeed', 'Pandas', 'NumPy']
     },
     {
       category: t('hardSkills.categories.database'),
       color: '#8b5cf6',
-      skills: ['PostgreSQL', 'SQLite']
+      skills: ['PostgreSQL', 'MongoDB', 'SQLite']
     },
     {
       category: t('hardSkills.categories.design'),

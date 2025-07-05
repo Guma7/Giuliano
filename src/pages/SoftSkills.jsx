@@ -11,17 +11,26 @@ const Container = styled.div`
 `
 
 const Title = styled(motion.h1)`
-  font-size: 3rem;
-  font-weight: 700;
-  background: ${props => props.theme.colors.gradient.primary};
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  font-size: 3.5rem;
+  font-weight: 800;
   text-align: center;
   margin-bottom: 3rem;
   
+  background: linear-gradient(135deg, #8b5cf6 0%, #a855f7 50%, #c084fc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  
+  -webkit-text-stroke: 2px rgba(139, 92, 246, 0.3);
+  text-stroke: 2px rgba(139, 92, 246, 0.3);
+  
+  filter: drop-shadow(0 4px 8px rgba(139, 92, 246, 0.4)) 
+          drop-shadow(0 0 20px rgba(168, 85, 247, 0.3));
+  
   @media (max-width: ${props => props.theme.breakpoints.mobile}) {
-    font-size: 2rem;
+    font-size: 2.5rem;
+    -webkit-text-stroke: 1px rgba(139, 92, 246, 0.3);
+    text-stroke: 1px rgba(139, 92, 246, 0.3);
   }
 `
 

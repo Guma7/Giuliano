@@ -18,6 +18,10 @@ body {
   color: #ffffff;
   line-height: 1.6;
   overflow-x: hidden;
+  user-select: text;
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
 }
 
 code {
@@ -52,13 +56,18 @@ code {
   transition: all 0.3s ease;
 }
 
-/* Focus styles for accessibility */
-*:focus {
-  outline: 2px solid #8b5cf6;
-  outline-offset: 2px;
+/* Remove focus outline and caret for all elements */
+* {
+  outline: none;
+  caret-color: transparent;
 }
 
 /* Remove focus outline for mouse users */
 *:focus:not(:focus-visible) {
   outline: none;
+}
+
+/* Prevent text cursor on non-input elements */
+*:not(input):not(textarea):not([contenteditable]) {
+  cursor: default;
 }

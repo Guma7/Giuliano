@@ -9,13 +9,13 @@ export const translations = {
     about: {
       phrases: {
         greeting: 'Que bom te ver aqui!<br/>Eu sou Giuliano, um mago dos códigos.',
-        experience: 'Tenho 5 anos de experiência full stack.',
+        experience: 'Tenho 5 anos de experiência em Full Stack e UI/UX',
         magic: 'Codificando sonhos em realidade!<br/>Faça o seu pedido...'
       },
       welcome: 'Bem-vindo ao meu mundo',
       description: {
         intro: 'Olá! Meu nome é Giuliano, sou apaixonado por arte, tecnologia, natureza, gentileza, ternura e pela Beatriz. Acredito que somente através de um propósito puro e de paixão genuína é possível se conectar em verdade com as pessoas, trazer magia para suas vidas e realmente melhorá-las.',
-        experience: 'Tenho 5 anos de experiência Full Stack desenvolvendo sites, aplicativos desktop e modelos LLMs. Durante essa jornada, trabalhei com diversas tecnologias e frameworks, sempre buscando soluções inovadoras e eficientes.',
+        experience: 'Tenho 5 anos de experiência como desenvolvedor Full Stack e Designer UI/UX, desenvolvendo aplicações web e desktop, além de soluções baseadas em LLM. . Durante essa jornada, trabalhei com diversas tecnologias e frameworks, sempre buscando soluções inovadoras e eficientes.',
         mission: 'Comecei a desenvolver com o intuito de dar vida a projetos pessoais e, hoje, sigo na busca de poder ajudar a transformar sonhos em realidade, com a esperança de, um dia, contribuir para um mundo melhor.'
       }
     },
@@ -209,13 +209,13 @@ export const translations = {
     about: {
       phrases: {
         greeting: 'Nice to meet you!<br/>I\'m Giuliano, a code wizard.',
-        experience: 'I have 5 years of full stack experience.',
+        experience: 'I have 5 years of Full Stack and UI/UX experience',
         magic: 'Coding dreams to make them true!<br/>Make your wish...'
       },
       welcome: 'Welcome to my world',
       description: {
         intro: 'Hello! My name is Giuliano, I\'m passionate about art, technology, nature, kindness, tenderness and Beatriz. I believe that only through a pure purpose and genuine passion is it possible to truly connect with people, bringing magic and improvements to their lives.',
-        experience: 'I have 5 years of Full Stack experience developing websites, desktop applications and LLM models. During this journey, I worked with various technologies and frameworks, always seeking innovative and efficient solutions.',
+        experience: 'I have 5 years of Full Stack and UI/UX experience, building web and desktop applications, as well as LLM-based solutions. During this journey, I worked with various technologies and frameworks, always seeking innovative and efficient solutions.',
         mission: 'I started developing with the intention of bringing personal projects to life and, today, I continue in the quest to help transform dreams into reality, with the hope of one day contributing to a better world.'
       }
     },

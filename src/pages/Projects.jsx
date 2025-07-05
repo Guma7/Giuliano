@@ -19,17 +19,26 @@ const Container = styled.div`
 `
 
 const Title = styled(motion.h1)`
-  font-size: 3rem;
-  font-weight: 700;
-  background: ${props => props.theme.colors.gradient.primary};
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  font-size: 3.5rem;
+  font-weight: 800;
   text-align: center;
   margin-bottom: 3rem;
   
+  background: linear-gradient(135deg, #8b5cf6 0%, #a855f7 50%, #c084fc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  
+  -webkit-text-stroke: 2px rgba(139, 92, 246, 0.3);
+  text-stroke: 2px rgba(139, 92, 246, 0.3);
+  
+  filter: drop-shadow(0 4px 8px rgba(139, 92, 246, 0.4)) 
+          drop-shadow(0 0 20px rgba(168, 85, 247, 0.3));
+  
   @media (max-width: ${props => props.theme.breakpoints.mobile}) {
-    font-size: 2rem;
+    font-size: 2.5rem;
+    -webkit-text-stroke: 1px rgba(139, 92, 246, 0.3);
+    text-stroke: 1px rgba(139, 92, 246, 0.3);
   }
 `
 
@@ -213,13 +222,21 @@ const FeatureItem = styled.li`
 `
 
 const StatusBadge = styled.span`
-  background: ${props => props.status === 'development' ? '#8b5cf6' : '#6b7280'};
-  color: white;
-  padding: 0.3rem 0.8rem;
-  border-radius: 12px;
-  font-size: 0.8rem;
+  background: ${props => props.status === 'development' ? 'transparent' : '#6b7280'};
+  color: ${props => props.status === 'development' ? props.theme.colors.primary : 'white'};
+  padding: ${props => props.status === 'development' ? '0.5rem 1rem' : '0.3rem 0.8rem'};
+  border: ${props => props.status === 'development' ? `1px solid ${props.theme.colors.primary}` : 'none'};
+  border-radius: ${props => props.status === 'development' ? '8px' : '12px'};
+  font-size: ${props => props.status === 'development' ? '1rem' : '0.8rem'};
   font-weight: 500;
-  margin-left: auto;
+  margin-left: ${props => props.status === 'development' ? '1rem' : 'auto'};
+  cursor: default;
+  
+  @media (max-width: ${props => props.theme.breakpoints.mobile}) {
+    font-size: ${props => props.status === 'development' ? '0.9rem' : '0.8rem'};
+    padding: ${props => props.status === 'development' ? '0.4rem 0.8rem' : '0.3rem 0.8rem'};
+    margin-left: ${props => props.status === 'development' ? '0.5rem' : 'auto'};
+  }
 `
 
 const ExpandButton = styled(motion.button)`
@@ -394,6 +411,7 @@ const Projects = () => {
           initial={{ y: -50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8 }}
+          data-text={t('projects.title')}
         >
           {t('projects.title')}
         </Title>
