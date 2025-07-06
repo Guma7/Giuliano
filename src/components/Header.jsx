@@ -13,10 +13,11 @@ const HeaderContainer = styled(motion.header)`
   background: ${props => props.theme.colors.gradient.primary};
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(139, 92, 246, 0.2);
-  padding: 1rem 2rem;
+  padding: 1rem 2rem;;
   
   @media (max-width: ${props => props.theme.breakpoints.mobile}) {
-    padding: 1rem;
+    padding: 0.5rem 1rem;
+    height: 60px;
   }
 `
 
@@ -44,7 +45,7 @@ const logoGlow = keyframes`
 `
 
 const Logo = styled(Link)`
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-weight: 800;
   text-decoration: none;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -124,7 +125,7 @@ rgb(26, 12, 59) 100%
   }
   
   @media (max-width: ${props => props.theme.breakpoints.mobile}) {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 `
 
@@ -153,8 +154,8 @@ const NavLink = styled(Link)`
   text-decoration: none;
   font-weight: 500;
   position: relative;
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
   transition: all 0.3s ease;
   
   &:hover {
@@ -197,7 +198,7 @@ const LanguageToggle = styled.button`
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(139, 92, 246, 0.3);
   color: ${props => props.theme.colors.text};
-  padding: 0.5rem 1rem;
+  padding: 0.4rem 0.8rem;
   border-radius: 8px;
   cursor: pointer;
   font-weight: 500;
