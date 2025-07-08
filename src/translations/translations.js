@@ -146,7 +146,7 @@ export const translations = {
         worldInGreen: {
           title: 'World in Green',
           subtitle: 'Site que reúne informações atualizadas sobre os principais malefícios causados ao planeta por ações humanas.',
-          description: 'O intuito do site é reunir, em apenas um local, todas as informações relevantes sobre diversas áreas impactadas. Sou de Porto Alegre, RS, Brasil, e vi de perto um pouco deste mundo caótico na enchente de 2024, causado justamente pelas ações às quais o site aborda, como também por negligências governamentais. O objetivo é, através do poder da informação, da conscientização e da racionalidade, ajudar a construir um futuro florido e vivo para nossos filhos.',
+          description: 'O objetivo do site é centralizar, em um só lugar, informações relevantes sobre diversas áreas gravemente afetadas por ações humanas irresponsáveis — impactos que colocam em risco a continuidade de nossa própria espécie. Sou de Porto Alegre, RS, Brasil, e vi de perto um pouco deste mundo caótico na enchente de 2024, causado justamente pelas ações às quais o site aborda, como também por negligências governamentais. O objetivo é, através do poder da informação, da conscientização e da racionalidade, ajudar a construir um futuro florido e vivo para nossos filhos.',
           note: 'O site ainda não foi lançado oficialmente, mas fiz uma versão adaptada especialmente para este portfólio, realizando o deploy no vercel.'
         },
         studyDu: {
@@ -325,7 +325,7 @@ export const translations = {
             'Recipes are shown in order of score in user ratings (either in initial sampling or in the filter search system)',
             'Post feed, news feed, friendship system and post rating and sharing system'
           ],
-          note: 'The site has not yet been launched, as it is in the final development phase. I made an adaptation (demonstrative) exclusively for this portfolio, hosting it on Render.'
+          note: 'The site is in its final development stage, but I created a special version exclusively for this portfolio, hosted on Render*.\n\n*The Vegan World and Aurora projects, temporarily hosted on the Render platform for this portfolio, may take a few seconds to load on first access. This is due to the nature of this hosting service. After the initial load, navigation will be smooth and responsive — reflecting the performance and quality of my code. Feel free to let these two projects load in the background while you explore my other projects.'
         },
         aurora: {
           title: 'Aurora',
@@ -346,8 +346,8 @@ export const translations = {
         worldInGreen: {
           title: 'World in Green',
           subtitle: 'Website that gathers updated information about the main harm caused to the planet by human actions.',
-          description: 'The purpose of the site is to gather, in just one place, all relevant information about various impacted areas. I am from Porto Alegre, RS, Brazil, and I saw up close a bit of this chaotic world in the 2024 flood, caused precisely by the actions that the site addresses, as well as by government negligence. The goal is, through the power of information, awareness and rationality, to help build a flourishing and living future for our children.',
-          note: 'The site has not yet been officially launched, but I made an adapted version especially for this portfolio, deploying it on vercel.'
+          description: 'The purpose of the site is to gather, in just one place, all relevant information about various areas severely affected by irresponsible human actions — impacts that threaten the continuity of our own species. I am from Porto Alegre, RS, Brazil, and I saw up close a bit of this chaotic world in the 2024 flood, caused precisely by the actions that the site addresses, as well as by government negligence. The goal is, through the power of information, awareness and rationality, to help build a flourishing and living future for our children.',
+          note: 'This website is not officially released yet, but I made an adapted version especially for this portfolio, deploying it on vercel.'
         },
         studyDu: {
           title: 'StudyDu',

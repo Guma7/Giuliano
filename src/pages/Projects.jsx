@@ -65,7 +65,7 @@ const StudyImagesContainer = styled.div`
 `
 
 const StudyImage = styled.img`
-  width: 300px;
+  width: 320px;
   height: 200px;
   border-radius: 12px;
   border: 2px solid rgba(139, 92, 246, 0.3);
@@ -82,7 +82,7 @@ const StudyImage = styled.img`
   
   @media (max-width: ${props => props.theme.breakpoints.mobile}) {
     width: 100%;
-    max-width: 300px;
+    max-width: 250px;
     height: 180px;
   }
 `
