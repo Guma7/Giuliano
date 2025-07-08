@@ -125,7 +125,7 @@ export const translations = {
             'Receitas são mostradas por ordem de pontuação na avaliação dos usuários (seja na amostragem inicial ou no sistema de pesquisa por filtros)',
             'Feed de postagens, feed de notícias, sistema de amizade e sistema de avaliação e compartilhamento de postagens'
           ],
-          note: 'O site ainda não foi lançado, pois está em fase final de desenvolvimento. Fiz uma adaptação (demonstrativa) exclusivamente para este portfólio, hospedando-a no Render.'
+          note: 'O site está em fase final de desenvolvimento, mas fiz uma adaptação (demonstrativa) exclusivamente para este portfólio, hospedando-a no Render*. \n\n*Os projetos Vegan World e Aurora, hospedados na plataforma Render (de forma exclusiva e temporária para este portfólio), podem levar alguns segundos para carregar no primeiro acesso. Isso ocorre devido à natureza da hospedagem. Após esse carregamento inicial, a navegação será fluida e responsiva — refletindo a performance e a qualidade do meu código em sua essência. Sinta-se à vontade para deixar estes dois projetos abrindo em segundo plano enquanto explora os demais.'
         },
         aurora: {
           title: 'Aurora',

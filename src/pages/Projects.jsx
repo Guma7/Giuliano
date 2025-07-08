@@ -298,6 +298,21 @@ const SectionTitle = styled.h3`
   }
 `
 
+// Função para converter RGB para hexadecimal
+const rgbToHex = (rgb) => {
+  if (rgb.startsWith('#')) return rgb
+  
+  const rgbMatch = rgb.match(/rgb\((\d+),\s*(\d+),\s*(\d+)\)/)
+  if (rgbMatch) {
+    const r = parseInt(rgbMatch[1])
+    const g = parseInt(rgbMatch[2])
+    const b = parseInt(rgbMatch[3])
+    return `#${((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1)}`
+  }
+  
+  return rgb
+}
+
 const getTechColor = (tech) => {
   const techLower = tech.toLowerCase()
   
@@ -307,31 +322,31 @@ const getTechColor = (tech) => {
   }
   
   // Frontend
-  if (['react', 'next.js', 'html', 'css', 'tailwind css', 'styled components'].includes(techLower)) {
-    return ' #06b6d4'
+  if (['react', 'next.js', 'html5', 'css3', 'tailwind css', 'styled components', 'react router', 'context api', 'react-leaflet', 'framer motion'].includes(techLower)) {
+    return '#06b6d4'
   }
   
   // Backend
   if (['django', 'fastapi', 'node.js', 'express.js', 'django rest framework', 'drf', 'jwt'].includes(techLower)) {
-    return ' #10b981'
+    return '#10b981'
   }
   
   // ML/AI
   if (['pytorch', 'tensorflow', 'scikit-learn', 'pandas', 'numpy', 'matplotlib', 'deepspeed', 'sentencepiece', 'clean-text', 'beautifulsoup'].includes(techLower)) {
-    return ' #f59e0b'
+    return 'rgb(193, 180, 4)'
   }
   
   // Database
   if (['postgresql', 'sqlite'].includes(techLower)) {
-    return ' #8b5cf6'
+    return '#8b5cf6'
   }
   
-  // Tools/Others
-  if (['axios', 'react-leaflet', 'leaflet', 'vite', 'framer motion'].includes(techLower)) {
-    return ' #14b8a6'
+  // Tools/Build
+  if (['axios', 'leaflet', 'vite'].includes(techLower)) {
+    return '#14b8a6'
   }
   
-  return ' #6b7280' // Default color
+  return '#6b7280' // Default color
 }
 
 const Projects = () => {
@@ -354,7 +369,7 @@ const Projects = () => {
       url: 'https://aurora-s2vr.onrender.com/',
       subtitle: t('projects.data.aurora.subtitle'),
       status: 'live',
-      technologies: ['TypeScript', 'React', 'CSS', 'HTML', 'Node.js', 'Express.js', 'React-Leaflet', 'Leaflet', 'Axios'],
+      technologies: ['JavaScript', 'React', 'CSS3', 'HTML5', 'React Router', 'Context API', 'React-Leaflet', 'Node.js', 'Express.js', 'Leaflet'],
       description: t('projects.data.aurora.description'),
       features: t('projects.data.aurora.features'),
       note: t('projects.data.aurora.note')
@@ -364,7 +379,7 @@ const Projects = () => {
       url: 'https://worldingreen.vercel.app/',
       subtitle: t('projects.data.worldInGreen.subtitle'),
       status: 'live',
-      technologies: ['TypeScript', 'React', 'Styled Components', 'CSS', 'HTML', 'Vite', 'Framer Motion'],
+      technologies: ['TypeScript', 'React', 'Styled Components', 'CSS3', 'HTML5', 'React Router', 'Framer Motion', 'Vite'],
       description: t('projects.data.worldInGreen.description'),
       note: t('projects.data.worldInGreen.note')
     },
@@ -373,14 +388,14 @@ const Projects = () => {
       url: 'https://animecosp.vercel.app/',
       subtitle: t('projects.data.animeCosp.subtitle'),
       status: 'live',
-      technologies: ['TypeScript', 'React', 'Styled Components', 'CSS', 'HTML', 'Vite', 'Framer Motion'],
+      technologies: ['JavaScript', 'React', 'Styled Components', 'CSS3', 'HTML5', 'React Router', 'Framer Motion', 'Vite'],
       description: t('projects.data.animeCosp.description')
     },
     {
       title: t('projects.data.studyDu.title'),
       subtitle: t('projects.data.studyDu.subtitle'),
       status: 'development',
-      technologies: ['TypeScript', 'Python', 'C++', 'React', 'Styled Components', 'FastAPI', 'TensorFlow', 'PyTorch', 'DeepSpeed', 'SentencePiece', 'Clean-Text', 'BeautifulSoup'],
+      technologies: ['TypeScript', 'Python', 'C++', 'SQL', 'React', 'Next.Js', 'Styled Components', 'FastAPI', 'TensorFlow', 'PyTorch', 'DeepSpeed', 'SentencePiece', 'Clean-Text', 'BeautifulSoup', 'PostgreSQL'],
       description: t('projects.data.studyDu.description'),
       features: t('projects.data.studyDu.features'),
       experiences: t('projects.data.studyDu.experiences'),
@@ -447,10 +462,10 @@ const Projects = () => {
                 
                 <TechTags>
                   {project.technologies.map((tech) => (
-                    <TechTag key={tech} color={getTechColor(tech)}>
-                      {tech}
-                    </TechTag>
-                  ))}
+          <TechTag key={tech} color={rgbToHex(getTechColor(tech))}>
+            {tech}
+          </TechTag>
+        ))}
                 </TechTags>
               </ProjectHeader>
               
@@ -468,7 +483,7 @@ const Projects = () => {
                 )}
                 
                 {project.note && (
-                  <ProjectDescription style={{ fontStyle: 'italic', marginTop: '1rem' }}>
+                  <ProjectDescription style={{ fontStyle: 'italic', marginTop: '1rem', whiteSpace: 'pre-line' }}>
                     {project.note}
                   </ProjectDescription>
                 )}
